@@ -1,6 +1,6 @@
-FROM circleci/ruby:2.3.4-node-browsers
+FROM circleci/ruby:2.3-node
 
-RUN apt-get update && apt-get install -y\
+RUN sudo apt-get update && sudo apt-get install -y\
       python \
       python-pip \
       libpython-dev \
@@ -9,5 +9,3 @@ RUN apt-get update && apt-get install -y\
 
 RUN pip install \
       awscli==1.16.140
-
-CMD ["node"]
