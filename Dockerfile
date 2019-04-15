@@ -1,4 +1,4 @@
-FROM node:8.9
+FROM node:latest
 
 RUN apt-get update && apt-get install -y\
       python \
@@ -8,7 +8,6 @@ RUN apt-get update && apt-get install -y\
       zip
 
 RUN pip install \
-      awsebcli==3.7.4 \
-      awscli==1.11.52
+      awscli==1.16.140
 
 CMD ["node"]
