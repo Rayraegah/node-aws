@@ -1,4 +1,4 @@
-FROM node:latest
+FROM circleci/ruby:2.3.4-node-browsers
 
 RUN apt-get update && apt-get install -y\
       python \
